@@ -3,8 +3,8 @@
 [![coverage report](https://gitlab.com/pardede/tugas-ppw/badges/master/coverage.svg)](https://gitlab.com/pardede/tugas-ppw/commits/master)
 
 ### Heroku Link
-Click [Here](http://dummy.herokuapp.com) to open our web.
-http://dummy.herokuapp.com 
+Click [Here](https://tugasppw1.herokuapp.com/) to open our web.
+https://tugasppw1.herokuapp.com/ 
 
 # PPW First Project
 
