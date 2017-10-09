@@ -14,7 +14,7 @@ class UpdateStatusUnitTest(TestCase):
         found = resolve('/status/')
         self.assertEqual(found.func, index)
 
-    def root_is_using_status_url(self):
+    def test_root_is_using_status_url(self):
         response = Client().get('/')
         self.assertEqual(response.status_code,301)
-        self.assertRedirect(response,'/status/',301,200)
+        self.assertRedirects(response,'/status/',301,200)
