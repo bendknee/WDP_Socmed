@@ -1,0 +1,27 @@
+{% extends "profile_page/layout/base.html" %}
+
+{% block content %}
+<h1>Portofolio</h1>
+<hr/>
+<section name = "profil" align=centre>
+    <p>
+        <img src=https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Anonymous_emblem.svg/1200px-Anonymous_emblem.svg.png alt="Hepzibah Smith" width="150" height="150" style="border-radius: 50% ">
+        <h3>
+            {{author}}
+        </h3>
+    </p>
+    
+</section>
+<section name="bio">
+    <h2>Bio</h2>
+    <p>
+        {{birthday}}
+        {{gender}}
+        {{expertise}}
+        {{description}}
+        {{email}}
+    </p>    
+</section>
+<hr/>
+
+{% endblock %}
