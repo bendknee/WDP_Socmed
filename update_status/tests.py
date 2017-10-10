@@ -21,7 +21,7 @@ class UpdateStatusUnitTest(TestCase):
 
     def test_post_status_url_is_exist(self):
         status = 'I pwn U'
-        response_post = Client().post('/status/update_status', {'status': status})
+        response_post = Client().post('/status/update_status/', {'status': status})
         self.assertEqual(response_post.status_code, 302)
 
     def test_post_status_url_is_using_update_status_func(self):
