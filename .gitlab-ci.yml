@@ -48,3 +48,5 @@ FunctionalTest:
     when: on_success
     script:
         - python manage.py test
+    only:
+        - master
