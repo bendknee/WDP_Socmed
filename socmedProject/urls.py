@@ -16,8 +16,13 @@ Including another URLconf
 from django.conf.urls import url, include
 from django.contrib import admin
 import profile_page.urls as profile_page
+from django.views.generic.base import RedirectView
+import update_status.urls as update_status
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^profile-page/', include(profile_page, namespace = 'profile-page')),
+    url(r'^admin/', admin.site.urls),
+    url(r'^status/',include(update_status,namespace='status')),
+    url(r'^$', RedirectView.as_view(url='/status/',permanent='true'), name='index'),
 ]

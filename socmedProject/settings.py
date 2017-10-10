@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'profile_page',
     'statistik',
+    'update_status',
 ]
 
 MIDDLEWARE = [
