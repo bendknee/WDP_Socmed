@@ -1,0 +1,23 @@
+body {
+	margin:0;
+  /*min-height: 2000px;*/
+}
+
+.navbar-static-top {
+  margin-bottom: 19px;
+}
+
+.container{
+	text-align: center;
+}
+
+ul {
+	list-style: none;
+	padding: 0;
+}
+
+
+/*Textarea not resizeable*/
+textarea {
+	resize:none
+}

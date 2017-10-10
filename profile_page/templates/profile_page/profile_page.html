@@ -1,9 +1,9 @@
 {% extends "profile_page/layout/base.html" %}
 
 {% block content %}
-<h1>Portofolio</h1>
+<h1>Profile</h1>
 <hr/>
-<section name = "profil" align=centre>
+<section name = "profile" align=centre>
     <p>
         <img src=https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Anonymous_emblem.svg/1200px-Anonymous_emblem.svg.png alt="Hepzibah Smith" width="150" height="150" style="border-radius: 50% ">
         <h3>
@@ -12,17 +12,35 @@
     </p>
     
 </section>
-<section name="bio">
-    <h2>Bio</h2>
-    <p>
-        {{content}}
-        {{birthday}}
-        {{gender}}
-        {{expertise}}
-        {{description}}
-        {{email}}
-    </p>    
+<section name="birthday">
+    <pre>
+        birthday    : {{birthday}}
+    </pre>    
 </section>
-<hr/>
+
+<section name="gender">
+    <pre>
+        gender      : {{gender}}
+    </pre>    
+</section>
+
+<section name="expertise">
+    <pre>
+        expertise   : {{expertise}}
+    </pre>    
+</section>
+
+<section name="description">
+    <pre>
+        description : {{description}}
+    </pre>    
+</section>
+
+<section name="email">
+    <pre>
+        email       : {{email}}
+    </pre>    
+</section>
+
 
 {% endblock %}
