@@ -3,9 +3,9 @@ from django.shortcuts import render
 response = {}
 
 def index(request):
-    response['friends'] = None #len(ModelsTirta.objects.all())
+    response['friends'] = '21' #len(ModelsTirta.objects.all())
     feeds = None #ModelsMiki.objects.all()
-    response['feeds'] = None #len(feeds)
-    response['last_feed'] = None #ModelsMiki.objects.get(pk=len(feeds)-1)
+    response['feeds'] = '2119' #len(feeds)
+    response['last_feed'] = 'hehe AHHHHHHH' #ModelsMiki.objects.get(pk=len(feeds)-1)
     html = 'statistic/statistic.html'
-    render(request, html, response)
+    return render(request, html, response)
