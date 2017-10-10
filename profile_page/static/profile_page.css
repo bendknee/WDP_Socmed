@@ -11,11 +11,12 @@ body {
 	text-align: center;
 }
 
-ul {
-	list-style: none;
-	padding: 0;
-}
-
+/*.tryborder{
+	width: 50px;
+    border: 1px solid black;
+    padding: 5px;
+    margin: 5px;
+}*/
 
 /*Textarea not resizeable*/
 textarea {
