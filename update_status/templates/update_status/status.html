@@ -1,6 +1,12 @@
 {% extends "layout/base.html" %}
 
 {% block content %}
-<h1>it works!</h1>
-<p>it's just a dummy html</p>
+<h1 class="main-title">Update Status</h1>
+<section>
+  <form id="form" method="POST" action="{% url 'status:update_status'}"}>
+      {% csrf_token %}
+      {{ status_form }}
+      <input id="submit" type="submit" class="button" value="Submit">
+  </form>
+</section>
 {% endblock %}
