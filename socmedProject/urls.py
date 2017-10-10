@@ -19,5 +19,5 @@ import profile_page.urls as profile_page
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r^'profile-page/', include(profile_page, namespace = 'profile-page'))
+    url(r'^profile-page/', include(profile_page, namespace = 'profile-page')),
 ]
