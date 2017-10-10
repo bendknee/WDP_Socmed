@@ -3,44 +3,45 @@
 {% block content %}
 <h1>Profile</h1>
 <hr/>
-<section name = "profile" align=center>
+<div name = "profile" align=center>
     <p>
         <img src=https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Anonymous_emblem.svg/1200px-Anonymous_emblem.svg.png alt="Hepzibah Smith" width="150" height="150" style="border-radius: 50% ">
         <h3>
             {{author}}
         </h3>
     </p>
-    
-</section>
-<section name="birthday">
-    <pre>
-        Birthday    : {{birthday}}
-    </pre>    
-</section>
 
-<section name="gender">
-    <pre id='makeitcentre'>
-        Gender      : {{gender}}
-    </pre>    
-</section>
+</div>
 
-<section name="expertise">
-    <pre>
-        Expertise   : {{expertise}}
-    </pre>    
-</section>
+<div name="birthday">
 
-<section name="description">
-    <pre>
-        Description : {{description}}
-    </pre>    
-</section>
+    Birthday    : {{birthday}}
 
-<section name="email">
-    <pre>
-        Email       : {{email}}
-    </pre>    
-</section>
+</div>
+
+<div name="gender" id="makeitcentre">
+
+    Gender      : {{gender}}
+
+</div>
+
+<div name="expertise">
+
+    Expertise   : {{expertise}}
+
+</div>
+
+<div name="description">
+
+    Description : {{description}}
+
+</div>
+
+<div name="email">
+
+    Email       : {{email}}
+
+</div>
 
 
 {% endblock %}
