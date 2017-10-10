@@ -5,7 +5,7 @@ from .views import index
 
 class ProfilePageUnitTest(TestCase):
 	def test_profile_page_url_is_exist(self):
-		response = Client().get('')
+		response = Client().get('/profile-page/')
 		self.assertEqual(response.status_code, 200)
 
 	def test_profilepage_using_index_func(self):
