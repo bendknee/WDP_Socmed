@@ -2,6 +2,7 @@ from django.test import TestCase
 from django.test import Client
 from django.urls import resolve
 from .views import index, update_status
+from .models import Status
 # Create your tests here.
 
 class UpdateStatusUnitTest(TestCase):
@@ -27,3 +28,15 @@ class UpdateStatusUnitTest(TestCase):
     def test_post_status_url_is_using_update_status_func(self):
         found = resolve('/status/update_status/')
         self.assertEqual(found.func, update_status)
+
+    def test_model_can_create_status(self):
+        new_status = Model.objects.create(status = 'I play dota everyday~')
+        count = Model.objects.all().count()
+        self.assertEqual(count,1)
+
+    def test_post_status_is_working(self):
+        status = 'I pwn U'
+        Client().post('/status/update_status/',{'status':status})
+        response = Client().get('/status/')
+        html_response = response.content.decode('utf8')
+        self.assertIn('I pwn U',html_response)
