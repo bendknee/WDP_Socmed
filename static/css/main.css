@@ -39,10 +39,10 @@ textarea {
   width: auto;
 }
 
-#navbar-item {
+#navbar {
   margin-right: 20px;
 }
 
-#navbar-item li:hover{
+#navbar li:hover{
   background-color: black;
 }
