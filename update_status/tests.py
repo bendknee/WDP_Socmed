@@ -30,8 +30,8 @@ class UpdateStatusUnitTest(TestCase):
         self.assertEqual(found.func, update_status)
 
     def test_model_can_create_status(self):
-        new_status = Model.objects.create(status = 'I play dota everyday~')
-        count = Model.objects.all().count()
+        new_status = Status.objects.create(status = 'I play dota everyday~')
+        count = Status.objects.all().count()
         self.assertEqual(count,1)
 
     def test_post_status_is_working(self):
@@ -39,4 +39,6 @@ class UpdateStatusUnitTest(TestCase):
         Client().post('/status/update_status/',{'status':status})
         response = Client().get('/status/')
         html_response = response.content.decode('utf8')
+        count = Status.objects.all().count()
+        self.assertEqual(count,1)
         self.assertIn('I pwn U',html_response)
