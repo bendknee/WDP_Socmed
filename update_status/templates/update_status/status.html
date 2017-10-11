@@ -1,4 +1,11 @@
 {% extends "layout/base.html" %}
+{% load staticfiles %}
+
+{% block static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/update_status.css' %}" />
+
+{% endblock %}
+
 
 {% block content %}
 <h1 class="main-title">Update Status</h1>

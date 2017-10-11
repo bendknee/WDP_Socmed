@@ -1,0 +1,43 @@
+body {
+    font-family: Century Gothic;
+    min-height: 685px;
+    position: relative;
+}
+
+.navbar-default .navbar-nav>li>a {
+  cursor: pointer;
+}
+
+.navbar-fixed-top {
+  margin-bottom: -10px;
+}
+
+.container{
+	text-align: center;
+}
+
+body content {
+    margin-left: 50px;
+}
+
+body footer p {
+    width: 100%;
+    height: 0px;
+    bottom: 30px;
+    left: 0px;
+    position: absolute;
+    text-align: center;
+
+}
+
+/*.tryborder{
+	width: 50px;
+    border: 1px solid black;
+    padding: 5px;
+    margin: 5px;
+}*/
+
+/*Textarea not resizeable*/
+textarea {
+	resize:none
+}
