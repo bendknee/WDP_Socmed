@@ -10,7 +10,7 @@
 {% block content %}
 <h1 class="main-title">Update Status</h1>
 <section>
-  <form id="form" method="POST" action="{% url 'status:update_status'}"}>
+  <form id="form" method="POST" action="{% url 'status:update_status' %}"}>
       {% csrf_token %}
       {{ status_form }}
       <input id="submit" type="submit" class="button" value="Submit">
