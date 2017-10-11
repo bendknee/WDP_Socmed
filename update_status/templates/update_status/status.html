@@ -8,12 +8,32 @@
 
 
 {% block content %}
-<h1 class="main-title">Update Status</h1>
+<h1>Update Status</h1>
 <section>
   <form id="form" method="POST" action="{% url 'status:update_status' %}"}>
       {% csrf_token %}
       {{ status_form }}
-      <input id="submit" type="submit" class="button" value="Submit">
+      <input id="submit" type="submit" value="Tweet">
   </form>
+</section>
+<section>
+  <h2>My Status</h2>
+  {% if status %}
+  {% for data in status %}
+    <div>
+      <img src=https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Anonymous_emblem.svg/1200px-Anonymous_emblem.svg.png alt="Hepzibah Smith" width="150" height="150" style="border-radius: 50% ">
+      {{name}}
+    </div>
+    <div>
+      {{data.status}}
+      {{data.created_date}}
+    </div>
+  {% endfor %}
+  {% else %}
+    <div class="alert alert-danger text-center">
+        <strong>Sorry!</strong> You haven't updated your status.
+    </div>
+  {% endif %}
+
 </section>
 {% endblock %}
