@@ -1,3 +1,4 @@
+{% load staticfiles %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,7 +9,7 @@
     <meta name="author" content="Benny Ghalsa Miki Tirta">
     <!-- bootstrap css -->
     <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" type = "text/css" href="../The Social Media/templates/layout/base.css" />
+    <link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}" />
     {% block static %}
     <!-- stylesheet goes here-->
     {% endblock %}
@@ -35,21 +36,8 @@
     <!-- Jquery n Bootstrap Script -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script type="application/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <script type="application/javascript">
-      $(function() {
-          $('a[href*="#"]:not([href="#"])').click(function() {
-            if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
-              var target = $(this.hash);
-              target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
-              if (target.length) {
-                $('html, body').animate({
-                  scrollTop: target.offset().top - 55
-                }, 1000);
-                return false;
-              }
-            }
-          });
-        });
-    </script>
+    {% block script %}
+
+    {% endblock %}
 </body>
 </html>

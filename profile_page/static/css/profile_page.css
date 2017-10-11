@@ -1,12 +1,1 @@
 
-/*.tryborder{
-	width: 50px;
-    border: 1px solid black;
-    padding: 5px;
-    margin: 5px;
-}*/
-
-/*Textarea not resizeable*/
-textarea {
-	resize:none
-}
