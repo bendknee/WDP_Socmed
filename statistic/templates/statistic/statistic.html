@@ -15,9 +15,20 @@
         <img src=https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Anonymous_emblem.svg/1200px-Anonymous_emblem.svg.png alt="Hepzibah Smith" width="180" height="180" style="border-radius: 50%">
     </div>
     <div id = "sameline2">
-        <h1>{{name}}</h1>
+        <a href="{% url 'profile-page:index' %}">{{name}}</a>
     </div>
     <br>
+    <div id = sameline3>
+        <a href="#">Friends</a>
+        <p>{{friends}} People</p>
+    </div>
+    <div id = sameline4>
+        <a href="{% url 'status:index' %}">Feed</a>
+        <p>{{feeds}} Post</p>
+    </div>
+    <div font-size="18px">
+        <p>Latest Post</p>
+    </div>
 
 
 

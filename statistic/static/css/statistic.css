@@ -6,29 +6,32 @@
 #page_title {
     margin-top: 15px;
     margin-left: 200px;
-    font-size: 30px;
+    font-size: 26px;
 }
 
 
 #sameline1 {
     display: inline-block;
     margin-right: 50px;
-
+    margin-bottom: 40px;
 }
 
 #sameline2 {
     display: inline-block;
-
+    margin-bottom: 40px;
+    font-size: 42px;
 }
 
 #sameline3 {
     display: inline-block;
-    width: 200px;
-    margin-right: 20px;
+    margin-right: 260px;
+    margin-bottom: 50px;
+    font-size: 18px;
 }
 
 #sameline4 {
     display: inline-block;
-
+    margin-bottom: 50px;
+    font-size: 18px;
 }
 
