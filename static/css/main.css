@@ -43,6 +43,9 @@ textarea {
   margin-right: 20px;
 }
 
-#navbar li:hover{
-  background-color: black;
+#navbar li a:hover{
+  animation: blinker 1s linear infinite;
+}
+@keyframes blinker {
+  50% { background-color:#38393a; }
 }
