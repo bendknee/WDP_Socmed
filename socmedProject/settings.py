@@ -75,6 +75,7 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'socmedProject.wsgi.application'
 
+STATIC_URL = '/static/'
 
 # Database
 # https://docs.djangoproject.com/en/1.11/ref/settings/#databases
