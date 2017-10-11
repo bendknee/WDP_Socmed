@@ -9,38 +9,6 @@
     font-size: 30px;
 }
 
-body {
-    font-family: Century Gothic;
-    min-height: 685px;
-    position: relative;
-}
-
-body content {
-    margin-left: 50px;
-}
-
-body header nav{
-    font-size: 15px;
-}
-
-body footer p {
-    width: 100%;
-    height: 0px;
-    bottom: 35px;
-    left: 0px;
-    position: absolute;
-    text-align: center;
-
-}
-
-.navbar-fixed-top {
-  margin-bottom: -10px;
-}
-
-.navbar-default .navbar-nav>li>a {
-  cursor: pointer;
-}
-
 #sameline1 {
     display: inline-block;
     margin-right: 50px;
@@ -63,4 +31,11 @@ body footer p {
 
 }
 
+/*.tryborder{
+	width: 50px;
+    border: 1px solid black;
+    padding: 5px;
+    margin: 5px;
+}*/
 
+/*Textarea not resizeable*/
