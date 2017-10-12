@@ -1,43 +1,53 @@
 {% load staticfiles %}
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="description" content="Social Media">
-    <meta name="author" content="Benny Ghalsa Miki Tirta">
-    <!-- bootstrap css -->
-    <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}" />
-    {% block static %}
-    <!-- stylesheet goes here-->
-    {% endblock %}
-    <title>
-        {% block title %} Ling Ling {% endblock %}
-    </title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="Social Media">
+  <meta name="author" content="Benny Ghalsa Miki Tirta">
+  <!-- bootstrap css -->
+  <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}" />
+  <!-- Font Family -->
+  <link href="https://fonts.googleapis.com/css?family=Bungee+Shade" rel="stylesheet"> {% block static %}
+  <!-- stylesheet goes here-->
+  {% endblock %}
+  <title>
+    {% block title %} Welcome to Socmed {% endblock %}
+  </title>
 </head>
 
 <body>
-    <header>
-        {% include "partials/header.html" %}
-    </header>
-    <br>
-    <br>
-    <content>
-            {% block content %}
-                <!-- content goes here -->
-            {% endblock %}
-    </content>
-    <footer>
-        {% include "partials/footer.html" %}
-    </footer>
-
-    <!-- Jquery n Bootstrap Script -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script type="application/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    {% block script %}
-
+  <header>
+    {% include "partials/header.html" %}
+  </header>
+  <br>
+  <br>
+  <content>
+    {% block content %}
+    <!-- content goes here -->
     {% endblock %}
+  </content>
+  <footer>
+    {% include "partials/footer.html" %}
+  </footer>
+
+  <!-- Jquery n Bootstrap Script -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script type="application/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      // get current URL path and assign 'active' class
+      var pathname = window.location.pathname;
+      $('.nav > li > a[href="' + pathname + '"]').parent().addClass('active');
+    })
+  </script>
+  {% block script %}
+  <!-- script goes here -->
+  {% endblock %}
 </body>
+
 </html>

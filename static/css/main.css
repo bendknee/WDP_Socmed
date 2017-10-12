@@ -26,16 +26,26 @@ textarea {
 	resize:none
 }
 
-
-.navbar-fixed-top {
-  margin-bottom: -10px;
+.brand {
+  padding: 5px;
+  margin-left: 20px;
+  font-family: 'Bungee Shade', cursive;
+  font-size: 30px;
+  color: white;
+}
+.brand>img {
+  height: 100%;
+  padding: 15px;
+  width: auto;
 }
 
-.navbar-default .navbar-nav>li>a {
-  cursor: pointer;
+#navbar {
+  margin-right: 20px;
 }
 
-
-.container{
-	text-align: center;
+#navbar li a:hover{
+  animation: blinker 1s linear infinite;
+}
+@keyframes blinker {
+  50% { background-color:#38393a; }
 }
