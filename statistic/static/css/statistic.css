@@ -1,14 +1,21 @@
 .center_screen {
-    margin-top: 10px;
+    margin-top: 0px;
     margin-left: 420px;
 }
 
 #page_title {
     margin-top: 15px;
     margin-left: 200px;
-    font-size: 26px;
+    font-size: 32px;
 }
 
+#birthdate {
+    font-size: 18px;
+}
+
+#email {
+    font-size: 20px;
+}
 
 #sameline1 {
     display: inline-block;
@@ -25,13 +32,18 @@
 #sameline3 {
     display: inline-block;
     margin-right: 260px;
-    margin-bottom: 50px;
-    font-size: 18px;
+    margin-bottom: 30px;
+    font-size: 22px;
 }
 
 #sameline4 {
     display: inline-block;
-    margin-bottom: 50px;
-    font-size: 18px;
+    margin-bottom: 30px;
+    font-size: 22px;
+}
+
+#last_feed {
+    font-size: 22px;
+
 }
 

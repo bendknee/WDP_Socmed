@@ -8,7 +8,7 @@
 
 
 {% block content %}
-<div id="page_title">Statistic</div>
+<div id="page_title"><b><i>Statistic</i></b></div>
 <hr/>
 <div class="center_screen">
     <div id = "sameline1">
@@ -16,20 +16,23 @@
     </div>
     <div id = "sameline2">
         <a href="{% url 'profile-page:index' %}">{{name}}</a>
+        <div id = "birthdate">Born on {{birthday}}</div>
+        <div id = "email">{{email}}</div>
     </div>
     <br>
-    <div id = sameline3>
+    <div id = "sameline3">
         <a href="#">Friends</a>
-        <p>{{friends}} People</p>
+        <p><b>{{friends}}</b> People</p>
     </div>
-    <div id = sameline4>
-        <a href="{% url 'status:index' %}">Feed</a>
-        <p>{{feeds}} Post</p>
-    </div>
-    <div font-size="18px">
-        <p>Latest Post</p>
+    <div id = "sameline4">
+        <a href="{% url 'status:index' %}">Feeds</a>
+        <p><b>{{feeds}}</b> Post</p>
     </div>
 
+    <h4>Latest Post</h4>
+    <div id = "last_">
+        {{last_feed}}
+    </div>
 
 
 
