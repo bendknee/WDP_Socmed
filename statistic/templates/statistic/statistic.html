@@ -21,7 +21,7 @@
     </div>
     <br>
     <div id = "sameline3">
-        <a href="#">Friends</a>
+        <a href="{% url 'friend:index' %}">Friends</a>
         <p><b>{{friends}}</b> People</p>
     </div>
     <div id = "sameline4">
@@ -30,7 +30,7 @@
     </div>
 
     <h4>Latest Post</h4>
-    <div id = "last_">
+    <div id = "last_feed">
         {{last_feed}}
     </div>
 

@@ -1,6 +1,7 @@
 {% extends "layout/base.html" %}
 {% load staticfiles %}
 
+
 {% block static %}
     <link rel="stylesheet" type="text/css" href="{% static 'css/update_status.css' %}" />
 
@@ -8,8 +9,8 @@
 
 
 {% block content %}
-<h1>Update Status</h1>
-<section>
+<div id="page_title"><b><i>Add Friend</i></b></div>
+<hr/>
   <form id="form" method="POST" action="{% url 'status:update_status' %}"}>
       {% csrf_token %}
       {{ status_form }}

@@ -22,6 +22,12 @@ body footer p {
 
 }
 
+#page_title {
+    margin-top: 15px;
+    margin-left: 200px;
+    font-size: 32px;
+}
+
 textarea {
 	resize:none
 }
