@@ -7,12 +7,12 @@ class Add_Friend_Form(forms.Form):
     title_attrs = {
         'type': 'text',
         'class': 'friend-name',
-        'placeholder':'Masukan Nama'
+        'placeholder':'Masukkan Nama'
     }
     description_attrs = {
         'type': 'url',
         'class': 'friend-url',
-        'placeholder':'masukan url'
+        'placeholder':'Masukkan url'
     }
 
     name = forms.CharField(label='', required=True, max_length=32, widget=forms.TextInput(attrs=title_attrs))

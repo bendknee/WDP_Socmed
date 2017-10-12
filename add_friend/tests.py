@@ -2,12 +2,13 @@ from django.test import TestCase
 from django.test import Client
 from django.urls import resolve
 from django.http import HttpRequest
+from .views import index, add_friend
 from .models import Add_Friend
 from .forms import Add_Friend_Form
 
 # Create your tests here.
 
-class Lab4UnitTest(TestCase):
+class AddFriendUnitTest(TestCase):
 	def test_add_friend_url_is_exist(self):
 		response = Client().get('/add-friend/')
 		self.assertEqual(response.status_code, 200)
@@ -18,20 +19,20 @@ class Lab4UnitTest(TestCase):
 
 	def test_model_can_create_add_friend(self):
 		#Creating a new activity
-		new_activity = Friend.objects.create(name='Tom Riddle',url='http://tom.herokuapp.com')
+		new_activity = Add_Friend.objects.create(name='Tom Riddle',url='http://tom.herokuapp.com')
 
 		#Retrieving all available activity
-		counting_all_available_Friend= Friend.objects.all().count()
+		counting_all_available_Friend= Add_Friend.objects.all().count()
 		self.assertEqual(counting_all_available_Friend,1)
 
 	def test_form_Friend_input_has_placeholder_and_css_classes(self):
-		form = Friend_Form()
+		form = Add_Friend_Form()
 		self.assertIn('class="form-control"', form.as_p())
 		self.assertIn('<label for="id_name">Nama:</label>', form.as_p())
 		self.assertIn('<label for="id_url">url:</label>', form.as_p())
 
 	def test_form_validation_for_blank_items(self):
-		form = Friend_Form(data={'name': '', 'url': ''})
+		form = Add_Friend_Form(data={'name': '', 'url': ''})
 		self.assertFalse(form.is_valid())
 		
 			
@@ -47,10 +48,11 @@ class Lab4UnitTest(TestCase):
 		self.assertIn(anonymous,html_response)
 		
 
-
+	'''
 	def test_lab_4_table_using_Friend_table_func(self):
 		found = resolve('/lab-4/result_table')
-		self.assertEqual(found.func, Friend_table)
+		self.assertEqual(found.func, friend_table)
+	'''
 		
 	def test_lab_4_showing_all_Friends(self):
 		name_budi = 'Budi'

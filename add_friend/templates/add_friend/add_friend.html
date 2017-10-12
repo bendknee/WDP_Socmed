@@ -1,57 +1,56 @@
-
 {% extends "layout/base.html" %}
-	{% load staticfiles %}
+{% load staticfiles %}
 
-	{% block static %}
-		<link rel="stylesheet" type="text/css" href="{% static 'css/add_friend.css' %}" />
-	{% endblock %}
+{% block static %}
+	<link rel="stylesheet" type="text/css" href="{% static 'css/add_friend.css' %}" />
+{% endblock %}
 
 
-	{% block content %}
-	  <section name="form">		
-		<div class="container">
-        <form id="form" method="POST" action="{% url 'friend:add_friend' %}">
-            <h2>Add Friend</h2>
-            {% csrf_token %}
-            {{ add_friend_form }}
-            <input id="submit" type="submit" class="btn btn-lg btn-block btn-info" value="Submit">
-            <br>
-        </form>
-    </div>
-		
-	  </section>
-	<br>
-	<br>
+{% block content %}
+  <section name="form">
+	<div class="container">
+	<form id="form" method="POST" action="{% url 'friend:add_friend' %}">
+		<h2>Add Friend</h2>
+		{% csrf_token %}
+		{{ add_friend_form }}
+		<input id="submit" type="submit" class="btn btn-lg btn-block btn-info" value="Submit">
+		<br>
+	</form>
+</div>
 
-	<section name="my-list" id="my-list">
-		<div class="container">
-			<h2 class="my-list-title">List Friend</h2>
-			<div class="flex">
-				{% if fren %}
-					{% for data in fren %}
-						<div class="flex-item">
-							<div class="to-do-list">
-								<div class="fren-name">
-									{{data.name}}
-								</div>
-								<div class="to-do-list-url">
-									{{data.url}}
-								</div>
-								<div class="to-do-list-date-added">
-									{{data.created_date}}
-								</div>
+  </section>
+<br>
+<br>
+
+<section name="my-list" id="my-list">
+	<div class="container">
+		<h2 class="my-list-title">List Friend</h2>
+		<div class="flex">
+			{% if fren %}
+				{% for data in fren %}
+					<div class="flex-item">
+						<div class="to-do-list">
+							<div class="fren-name">
+								{{data.name}}
+							</div>
+							<div class="to-do-list-url">
+								{{data.url}}
+							</div>
+							<div class="to-do-list-date-added">
+								{{data.created_date}}
 							</div>
 						</div>
-					{% endfor %}
-				{% else %}
-				<div class="alert alert-danger text-center">
-					<strong>Oops!</strong> Tidak ada data Todo.
-				</div>
-				{% endif %}
+					</div>
+				{% endfor %}
+			{% else %}
+			<div class="alert alert-danger text-center">
+				<strong>Oops!</strong> Tidak ada data Todo.
 			</div>
+			{% endif %}
 		</div>
-	</section>
+	</div>
+</section>
 
 
 
-	{% endblock %}
+{% endblock %}
