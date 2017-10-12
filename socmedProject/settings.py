@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'profile_page',
     'statistic',
     'update_status',
+	'add_friend',
 ]
 
 MIDDLEWARE = [

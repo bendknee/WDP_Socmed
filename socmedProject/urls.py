@@ -19,11 +19,13 @@ from django.views.generic.base import RedirectView
 import profile_page.urls as profile_page
 import update_status.urls as update_status
 import statistic.urls as statistic
+import add_friend.urls as friend
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^profile-page/', include(profile_page, namespace = 'profile-page')),
     url(r'^status/',include(update_status,namespace='status')),
     url(r'^statistic/', include(statistic,namespace='statistic')),
+	url(r'^friend/', include(friend,namespace='friend')),
     url(r'^$', RedirectView.as_view(url='/status/',permanent='true'), name='index'),
 ]
