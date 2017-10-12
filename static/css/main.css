@@ -9,7 +9,7 @@ body content {
 }
 
 body header nav{
-    font-size: 15px;
+    font-size: 16px;
 }
 
 body footer p {
@@ -54,4 +54,16 @@ textarea {
 }
 @keyframes blinker {
   50% { background-color:#38393a; }
+}
+
+@media only screen and (max-width: 767px) {
+    #page_title {
+        margin-top: 15px;
+        font-size: 32px;
+    }
+
+    body content {
+    margin-left: 50px;
+    text-align: center;
+    }
 }

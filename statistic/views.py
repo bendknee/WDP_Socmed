@@ -12,7 +12,7 @@ def index(request):
     response['friends'] = Add_Friend.objects.count()
     response['feeds'] = Status.objects.count()
     if Status.objects.count() > 0:
-        response['last_feed'] = Status.objects.latest('created_date')
+        response['last_feed'] = list(Status.objects.all())[Status.objects.count()-1]
     else:
         response['last_feed'] = "No Posts Yet!"
     html = 'statistic/statistic.html'
