@@ -2,12 +2,12 @@ from django.shortcuts import render
 from django.http import HttpResponseRedirect
 
 # Create your views here.
-response = {'author': "Hepzibah Smith"} #TODO Implement yourname
-birthday = '01 jan'
-gender =  'Female'
+response = {'author': "Hepzibah Sith"} #TODO Implement yourname
+birthday = '13 Jan 1057'
+gender =  'Male'
 expertise = 'Marketing Collector Public Speaking'
 description = 'Antique expert, Experience as marketer for 10 years'
-email = 'hello@smith.com'
+email = 'hello@sith.com'
 
 def index(request):
 	html = 'profile_page/profile_page.html'

@@ -8,45 +8,46 @@
 {% block content %}
 <div id="page_title"><b><i>Profile Page</i></b></div>
 <hr/>
-<div name = "profile" align=center>
+<div name = "profile" id = "name" align = "center">
     <p>
-        <img src=https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Anonymous_emblem.svg/1200px-Anonymous_emblem.svg.png alt="Hepzibah Smith" width="150" height="150" style="border-radius: 50% ">
-        <h3>
+        <img src=https://i0.wp.com/instageeked.com/wp-content/uploads/2015/10/tumblr_m4bx9cUI7t1qbwnuho1_1280.jpg alt="Hepzibah Smith" width="150" height="150" style="border-radius: 50% ">
+        <h1>
             {{author}}
-        </h3>
+        </h1>
     </p>
 
 </div>
 
-<div name="birthday">
+<div id = "bio">
+    <div name="birthday" align = "center">
 
-    Birthday    : {{birthday}}
+        <h4>Birthday    : {{birthday}}</h4>
 
+    </div>
+
+    <div name="gender" align = "center">
+
+       <h4>Gender      : {{gender}}</h4>
+
+    </div>
+
+    <div name="expertise" align = "center">
+
+        <h4>Expertise   : {{expertise}}</h4>
+
+    </div>
+
+    <div name="description" align = "center">
+
+        <h4>Description : {{description}}</h4>
+
+    </div>
+
+    <div name="email" align = "center">
+
+        <h4>Email       : {{email}}</h4>
+
+    </div>
 </div>
-
-<div name="gender" id="makeitcentre">
-
-    Gender      : {{gender}}
-
-</div>
-
-<div name="expertise">
-
-    Expertise   : {{expertise}}
-
-</div>
-
-<div name="description">
-
-    Description : {{description}}
-
-</div>
-
-<div name="email">
-
-    Email       : {{email}}
-
-</div>
-
 
 {% endblock %}
