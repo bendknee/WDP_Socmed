@@ -34,7 +34,7 @@ $(".delete-button").on("click",function(){
   {% for data in status %}
 	<li>
 		<div class="avatar">
-				<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Anonymous_emblem.svg/1200px-Anonymous_emblem.svg.png">
+				<img src="{% static 'img/profil.jpg' %}">
 					<div class="hover">
 					<a href="{% url 'profile-page:index'%}">Click</a>
 				</div>
