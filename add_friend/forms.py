@@ -16,4 +16,4 @@ class Add_Friend_Form(forms.Form):
     }
 
     name = forms.CharField(label='', required=True, max_length=32, widget=forms.TextInput(attrs=title_attrs))
-    url = forms.CharField(label='', required=True, widget=forms.Textarea(attrs=description_attrs))
+    url = forms.URLField(label='', required=True, widget=forms.Textarea(attrs=description_attrs))
