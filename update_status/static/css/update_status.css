@@ -34,7 +34,9 @@ form {
   height: 100px;
 }
 
-#submit {}
+#submit {
+  margin-top: 20px;
+}
 
 .date {
   font-weight: bold;
