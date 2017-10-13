@@ -91,6 +91,10 @@ form {
   opacity: 1;
 }
 
+.delete-button{
+  cursor: pointer;
+  color:red;
+}
 .hover {
   position: absolute;
   width: 100%;
