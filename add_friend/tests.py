@@ -38,8 +38,11 @@ class AddFriendUnitTest(TestCase):
 		self.assertFalse(form.is_valid())
 
 	def test_addfriend_post_fail(self):
-		response = Client().post('/friend/', {'name': '', 'url': ''})
-		self.assertEqual(response.status_code, 200)
+		response = Client().post('/friend/add_friend', {'name': '', 'url': ''})
+		self.assertEqual(response.status_code, 302)
+		response = Client().get('/friend/')
+		html_response = response.content.decode('utf8')
+		self.assertIn('Tidak ada data Todo.', html_response)
 
 	
 	def test_addfriend_post_success_and_render_the_result(self):
