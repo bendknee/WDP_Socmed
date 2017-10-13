@@ -34,7 +34,9 @@ form {
   height: 100px;
 }
 
-#submit {}
+#submit {
+  margin-top: 20px;
+}
 
 .date {
   font-weight: bold;
@@ -89,6 +91,10 @@ form {
   opacity: 1;
 }
 
+.delete-button{
+  cursor: pointer;
+  color:red;
+}
 .hover {
   position: absolute;
   width: 100%;
