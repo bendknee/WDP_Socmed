@@ -44,6 +44,6 @@ class UpdateStatusUnitTest(TestCase):
         self.assertIn('I pwn U',html_response)
 
     def test_status_delete_button(self):
-		new_activity = Todo.objects.create(status='Do something')
-		response_post = Client().post('/status/delete_status/',{'id':new_activity.id})
-		self.assertEqual(response_post.status_code,200)
+        new_activity = Status.objects.create(status='Do something')
+        response_post = Client().post('/status/delete_status/',{'id':new_activity.id})
+        self.assertEqual(response_post.status_code,200)
