@@ -8,7 +8,8 @@
 <form id="form" method="POST" action="{% url 'status:update_status' %}" }>
 	{% csrf_token %}
 	{{ status_form }}
-	<input id="submit" type="submit" value="Tweet">
+	<br/>
+	<input class="btn btn-lg btn-primary btn-info" id="submit" type="submit" value="Post">
 </form>
 </section>
 <section>
